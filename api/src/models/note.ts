@@ -1,6 +1,5 @@
 import mongoose, { Schema, Document } from 'mongoose'
 
-
 // type interface
 interface NoteInterface extends Document {
   content: string
@@ -13,18 +12,31 @@ const noteSchema: Schema = new Schema(
   {
     content: {
       type: String,
-      required: true
+      required: true,
     },
     author: {
-      type: String,
-      required: true
-    }
+      type: mongoose.Schema.Types.ObjectId,
+      ref: 'User',
+      required: true,
+    },
+    // add the favoriteCount property
+    favoriteCount: {
+      type: Number,
+      default: 0
+    },
+    // add the favoritedBy property
+    favoritedBy: [
+      {
+        type: mongoose.Schema.Types.ObjectId,
+        ref: 'User'
+      }
+    ]
   },
   {
-// Assigns createdAt and updatedAt fields with a Date type
-  timestamps: true
-  }
-);
+    // Assigns createdAt and updatedAt fields with a Date type
+    timestamps: true,
+  },
+)
 
 // Define the 'Note' model with the schema
 const Note = mongoose.model<NoteInterface>('Note', noteSchema)
