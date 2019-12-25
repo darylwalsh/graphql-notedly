@@ -6,6 +6,8 @@ import express, { Request, Response, NextFunction } from 'express'
 import { ApolloServer } from 'apollo-server-express'
 import jwt from 'jsonwebtoken'
 import models from './models'
+import helmet from 'helmet'
+import cors from 'cors'
 const db = require('./db')
 const typeDefs = require('./schema')
 const resolvers = require('./resolvers')
@@ -16,7 +18,9 @@ dotenv.config()
 // console.log('dbhost', process.env.DB_HOST_MONGO)
 const DB_HOST = process.env.DB_HOST_MONGO
 const app = express()
-let PORT: number = 4000
+app.use(helmet())
+app.use(cors())
+let PORT = 4000
 //const port = process.env.PORT || 4000
 
 if (!process.env.PORT) {
@@ -34,7 +38,7 @@ interface Note {
   author: string
 }
 
-let notes: Note[] = [
+const notes: Note[] = [
   { id: '1', content: 'This is a note', author: 'Adam Scott' },
   { id: '2', content: 'This is another note', author: 'Harlow Everly' },
   { id: '3', content: 'Oh hey look, another note!', author: 'Riley Harrison' },
