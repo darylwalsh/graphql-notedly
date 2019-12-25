@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.1.3](https://github.com/darylwalsh/graphql-notedly/compare/v0.1.2...v0.1.3) (2019-12-25)
+
+
+### Features
+
+* **api mvp comp:** api mvp complete ([042944c](https://github.com/darylwalsh/graphql-notedly/commit/042944ce08c0e778ed126e463a13679f31c77c34))
+
 ### [0.1.2](https://github.com/darylwalsh/graphql-notedly/compare/v0.1.1...v0.1.2) (2019-12-25)
 
 ### 0.1.1 (2019-12-25)
