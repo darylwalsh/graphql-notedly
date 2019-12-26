@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.1.4](https://github.com/darylwalsh/graphql-notedly/compare/v0.1.3...v0.1.4) (2019-12-26)
+
+
+### Features
+
+* **react_gui:** add initial react gui ([db283e8](https://github.com/darylwalsh/graphql-notedly/commit/db283e8395397c19b1466f8d0ff2c1dcac6790af))
+
 ### [0.1.3](https://github.com/darylwalsh/graphql-notedly/compare/v0.1.2...v0.1.3) (2019-12-25)
 
 
